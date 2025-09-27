@@ -9,7 +9,14 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs camera access to show live camera feed",
+        "NSMotionUsageDescription": "This app needs gyroscope access for device orientation",
+        "NSLocationWhenInUseUsageDescription": "This app needs location access for compass calibration",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "bundleIdentifier": "com.simohammadi.expotestapp"
     },
     "android": {
       "adaptiveIcon": {
@@ -19,7 +26,13 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ]
     },
     "web": {
       "output": "static",
@@ -43,6 +56,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "bb3ec779-ee5a-4a43-9f56-cefe7d9c1220"
+      }
     }
   }
 }
